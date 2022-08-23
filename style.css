@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #808080;
+    font-family: "Montserrat",serif;
+}
+/* upper section */
+.navbar{
+    display: flex;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+}
+.profile-pic{
+    height: 600px;
+    border-radius:50% ;
+}
+.text{
+    margin: 10px;
+    margin-left: 20px;
+    padding: 5px;
+    width: max-content;
+}
+.description{
+    padding: 5px;
+    width: 90%;
+    margin-top: 10px;
+    font-size: 35px;
+}
+.title{
+    margin-top: 20px ;
+    width: max-content;
+    font-size: 80px;
+}
+/* hero section */
+.cards{
+    float: left;
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition:  all 0.3s ease 0s;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 35px;
+}
+.cards:nth-child(n) :hover  .card{
+    transform: rotateY(180deg);
+}
+.card{
+    cursor: default;
+    height: 300px;
+    transform-style:preserve-3d ;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+}
+.card .front,
+.card .back{
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 1.2em;
+    height: 150px;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.card .back{
+    transform:rotateY(180deg);
+    
+}
+.card .back{
+    height: 300px;
+    width: 500px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card .back a{
+    padding: 0.5em 0.9em;
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 0.9em;
+    transition: all 0.2s ease 0s;
+    width: 20px;
+    border-radius: 10px;
+}
+.project{
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    font-size: 80px;
+    height: max-content;
+}
+.project1{
+    height: 300px;
+}
+.heading6{
+    margin: 5px;
+    background: transparent;
+    color: #000;
+    font-size: 2em;
+}
+.btn{
+    background: transparent;
+    margin: 1em;
+    padding: 10px;
+}
+.live-link{
+    margin-right: 30px;
+    
+}
+.cards:nth-child(2).card{
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+}
+@-webkit-keyframes giro{
+    from{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
+@keyframes giro{
+    from{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
